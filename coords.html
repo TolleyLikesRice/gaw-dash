@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hoggit Server Info</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"><span>HOGGIT Overview</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="coords.html"><i class="fa fa-map-o"></i><span>Coordinate Converter</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <div>
+                        <div class="row align-items-center" style="padding:10px">
+                            <div class="col">
+                                <h3 class="text-dark mb-0">Coordinate Converter</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title"><strong>Decimal Degrees (DD)</strong><br></h4>
+                                    <h6 class="text-muted card-subtitle mb-2">Latitude:</h6>
+                                    <div class="row">
+                                        <div class="col form-inline"><input type="number" id="ddm-8" class="form-control"><span>&nbsp;°<br></span></div>
+                                    </div>
+                                    <h6 class="text-muted card-subtitle mb-2"><br>Longitude:</h6>
+                                    <div class="row">
+                                        <div class="col form-inline"><input type="number" id="ddm-8" class="form-control"><span>&nbsp;°<br></span></div>
+                                        <div class="col col-2"><button class="btn btn-primary" type="button">Convert</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title"><strong>Degrees Decimal Minutes (DDM)</strong><br></h4>
+                                    <h6 class="text-muted card-subtitle mb-2">Latitude:<br></h6>
+                                    <div class="row">
+                                        <div class="col form-inline"><input type="number" id="ddm1" class="form-control"><span>&nbsp;°<br></span></div>
+                                        <div class="col form-inline"><input type="number" id="ddm2" class="form-control"><span>&nbsp;'</span></div>
+                                        <div class="col col-2"><select id="ddm3" class="form-control">
+                                                <option value="0">N</option>
+                                                <option value="1">S</option>
+                                            </select></div>
+                                        <div class="col col-2"><span>&nbsp; &nbsp;&nbsp;</span></div>
+                                    </div>
+                                    <h6 class="text-muted card-subtitle mb-2"><br>Longitude:<br></h6>
+                                    <div class="row">
+                                        <div class="col form-inline"><input type="number" id="ddm1" class="form-control"><span>&nbsp;°<br></span></div>
+                                        <div class="col form-inline"><input type="number" id="ddm2" class="form-control"><span>&nbsp;'</span></div>
+                                        <div class="col col-2"><select id="ddm3" class="form-control">
+                                                <option value="0">E</option>
+                                                <option value="1">W</option>
+                                            </select></div>
+                                        <div class="col col-2"><button class="btn btn-primary" type="button">Convert</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title"><strong>Degrees Minutes Seconds (DMS)</strong><br></h4>
+                                    <h6 class="text-muted card-subtitle mb-2">Latitude:<br></h6>
+                                    <div class="row">
+                                        <div class="col form-inline"><input type="number" id="ddm-1" class="form-control"><span>&nbsp;°<br></span></div>
+                                        <div class="col form-inline"><input type="number" id="ddm-2" class="form-control"><span>&nbsp;'</span></div>
+                                        <div class="col form-inline"><input type="number" id="ddm-2" class="form-control"><span>&nbsp;"</span></div>
+                                        <div class="col col-2"><select id="ddm-3" class="form-control">
+                                                <option value="0">N</option>
+                                                <option value="1">S</option>
+                                            </select></div>
+                                        <div class="col col-2"><span>&nbsp; &nbsp;&nbsp;</span></div>
+                                    </div>
+                                    <h6 class="text-muted card-subtitle mb-2"><br>Longitude:<br></h6>
+                                    <div class="row">
+                                        <div class="col form-inline"><input type="number" id="ddm-4" class="form-control"><span>&nbsp;°<br></span></div>
+                                        <div class="col form-inline"><input type="number" id="ddm-5" class="form-control"><span>&nbsp;'</span></div>
+                                        <div class="col form-inline"><input type="number" id="ddm-6" class="form-control"><span>&nbsp;"</span></div>
+                                        <div class="col col-2"><select id="ddm-7" class="form-control">
+                                                <option value="0">E</option>
+                                                <option value="1">W</option>
+                                            </select></div>
+                                        <div class="col col-2"><button class="btn btn-primary" type="button">Convert</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span id="lastUpdated">Last Update:&nbsp;2021-03-13T09:38:26Z</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
